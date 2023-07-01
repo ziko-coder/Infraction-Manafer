@@ -38,6 +38,130 @@ The backend of this project utilizes the following technologies:
 * GraphQL: A query language for APIs and runtime for executing queries.
 * SOAP: Protocol for exchanging structured information in web services.
 * gRPC: A high-performance, open-source framework for remote procedure calls.
+#### Eureka Discovery Project Structure:
+````
+├───.idea
+├───.mvn
+│   └───wrapper
+├───src
+│   ├───main
+│   │   ├───java
+│   │   │   └───com
+│   │   │       └───example
+│   │   │           └───eurekadiscoveryserver
+│   │   └───resources
+│   └───test
+│       └───java
+│           └───com
+│               └───example
+│                   └───eurekadiscoveryserver
+└───target
+    ├───classes
+    │   └───com
+    │       └───example
+    │           └───eurekadiscoveryserver
+    └───generated-sources
+        └───annotations
+````
+
+#### Gateway Project Structure
+````
+├───.idea
+├───.mvn
+│   └───wrapper
+├───src
+│   ├───main
+│   │   ├───java
+│   │   │   └───com
+│   │   │       └───example
+│   │   │           └───gatewayprojet
+│   │   └───resources
+│   └───test
+│       └───java
+│           └───com
+│               └───example
+│                   └───gatewayprojet
+└───target
+    ├───classes
+    │   └───com
+    │       └───example
+    │           └───gatewayprojet
+    └───generated-sources
+        └───annotations
+````
+
+#### Immatriculation Micro-Service Structure:
+````
+├───main
+│   ├───java
+│   │   └───com
+│   │       └───example
+│   │           └───immatriculationservice
+│   │               ├───dto
+│   │               ├───entities
+│   │               ├───grpc
+│   │               │   ├───services
+│   │               │   └───stubs
+│   │               ├───mapper
+│   │               ├───repositories
+│   │               ├───service
+│   │               └───web
+│   │                   ├───graphqlController
+│   │                   ├───restController
+│   │                   └───soapController
+│   └───resources
+│       ├───graphql
+│       ├───static
+│       └───templates
+└───test
+    └───java
+        └───com
+            └───example
+                └───immatriculationservice
+````
+
+#### Radars Micro-Service Structure:
+````
+├───main
+│   ├───java
+│   │   └───com
+│   │       └───example
+│   │           └───radarservice
+│   │               ├───entities
+│   │               ├───feignClients
+│   │               ├───models
+│   │               ├───repositories
+│   │               └───web
+│   └───resources
+│       ├───static
+│       └───templates
+└───test
+    └───java
+        └───com
+            └───example
+                └───radarservice
+````
+
+#### Infractions Micro-Service Structure
+````
+├───main
+│   ├───java
+│   │   └───com
+│   │       └───example
+│   │           └───infractionservices
+│   │               ├───entities
+│   │               ├───repositories
+│   │               └───web
+│   └───resources
+│       ├───graphql
+│       ├───static
+│       └───templates
+└───test
+    └───java
+        └───com
+            └───example
+                └───infractionservices
+````
   
 ### Frontend Technologies
 The frontend of this project is developed using the following technologies:
