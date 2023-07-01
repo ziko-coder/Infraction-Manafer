@@ -54,6 +54,7 @@ Dashboard:![Dashboard](./ressources/dashborad.png)
 Vehicles:![Vehicles](./ressources/vehicles.png)
 Radars:![Vehicles](./ressources/radars.png)
 For more details, check out this short video:
+[![GIF Description]](./ressources/gif.gif)
 
 
 ## License
