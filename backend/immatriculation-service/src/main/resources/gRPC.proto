@@ -1,0 +1,55 @@
+syntax ="proto3";
+option  java_package="com.example.immatriculationservice.grpc.stubs"; // ou put file copiler
+message Vehicule{
+  int32 id=1;
+  string nom=2;
+  string matricule=3;
+  string marque =4;
+  int32 puissFiscal=5;
+  string modele=6;
+  Proprietaire Proprietaire=7;
+}
+message VehiculeId{
+  int32 id=1;
+}
+message Proprietaire{
+  int32 id=1;
+  string nom=2;
+  string birthDate=3;
+  string email=4;
+}
+message Proprietaireid{
+  int64 id=1;
+}
+message GetVehiculeListRequest{}
+
+message GetProprietaireListRequest{}
+
+message VehiculeListResponse{
+  repeated Vehicule vehicule=1;
+}
+message ProprietaireListResponse{
+  repeated Proprietaire proprietaire=1;
+}
+message VehiculeResponseDTO{
+  int32 id=1;
+  string nom=2;
+  string marque =3;
+  int32 puissFiscal=4;
+  string modele=5;
+  Proprietaire Proprietaire=6;
+}
+//service VehiculeService{
+//  rpc getVehiculeById( VehiculeId ) returns (Vehicule);
+//  rpc  getVehiculeList (GetVehiculeListRequest) returns (VehiculeListResponse);
+//}
+service Proprietaire_Vehicule_Service{
+  rpc getProprietaireById( Proprietaireid ) returns (Proprietaire);
+  rpc  getProprietaireList (GetProprietaireListRequest) returns (ProprietaireListResponse);
+  rpc GetProprietaireByVehiculeId(Proprietaireid) returns (Proprietaire);
+  rpc getVehiculeById( VehiculeId ) returns (Vehicule);
+  rpc  getVehiculeList (GetVehiculeListRequest) returns (VehiculeListResponse);
+
+
+
+}

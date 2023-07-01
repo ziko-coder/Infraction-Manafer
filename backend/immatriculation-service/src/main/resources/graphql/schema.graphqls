@@ -1,0 +1,54 @@
+type Query {
+    getAllVehicules: [Vehicule],
+    getVehiculeById(id : Int): Vehicule,
+    getAllProprietaires: [Proprietaire],
+    getProprietaireById(id : Int): Proprietaire
+}
+
+
+type Mutation {
+    saveVehicule(vehicule : VehiculeType):Vehicule
+    updateVehicule(vehicule : VehiculeType, id : Int):Vehicule
+    deleteVehicule(id : Int):String
+
+    saveProprietaire(proprietaire : ProprietaireType):Proprietaire
+    updateProprietaire(proprietaire : ProprietaireType, id : Int):Proprietaire
+    deleteProprietaire(id : Int):String
+}
+
+type Vehicule {
+    id : Int,
+    numMatricule : String,
+    marque : String,
+    puissanceFiscale : String,
+    modele : String,
+
+}
+
+input VehiculeType {
+    id : Int,
+    numMatricule : String,
+    marque : String,
+    puissanceFiscale : String,
+    modele : String,
+    infractionID : Int,
+    proprietaire : ProprietaireType
+
+}
+
+type Proprietaire {
+    id : Int,
+    name : String,
+    email : String,
+    vehicules : [Vehicule]
+
+}
+
+input ProprietaireType {
+    id : Int,
+    name : String,
+    email : String,
+    vehicules : [VehiculeType]
+
+}
+

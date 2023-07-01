@@ -1,0 +1,55 @@
+<div class="container">
+  <div class="row">
+
+    <div class="col-6">
+        <section class="vh-lg-100 mt-5 mt-lg-0 bg-soft d-flex align-items-center">
+          <div class="container">
+            <div class="row justify-content-center form-bg-image" data-background-lg="assets/img/signin.svg">
+              <div class="col-12 d-flex align-items-center justify-content-center">
+                <div class="bg-white shadow border-0 rounded border-light p-4 p-lg-5 w-100 fmxw-500">
+                  <div class="text-center text-md-center mb-4 mt-md-0">
+                    <h1 class="mb-0 h3 text-tertiary"><b>Sign In To Your Account</b></h1><br/>
+                  </div>
+                  <div class="alert alert-danger alert-dismissible fade show" role="alert" *ngIf="error">
+                    <span class="fas fa-bullhorn me-1"></span>
+                    <strong>{{error}}</strong>
+                    <button type="button" class="btn-close btn-sm" data-bs-dismiss="alert" aria-label="Close"></button>
+                  </div>
+
+                  <form action="#" class="mt-4" [formGroup]="formGroup" (ngSubmit)="submit()">
+                    <div class="form-group mb-4">
+                      <label for="text" >Username</label>
+                      <div class="input-group">
+                        
+                        <input type="email" formControlName="username" class="form-control" placeholder="Username" id="email" autofocus required>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="form-group mb-4">
+                        <label for="password">Password</label>
+                        <div class="input-group">
+                            
+                          <input type="password" formControlName="password" placeholder="Password" class="form-control" id="password" required>
+                        </div>
+                      </div>
+                      <div class="d-flex justify-content-between align-items-top mb-4">
+
+                        <div><a href="#" class="small text-right">Forgot Password?</a></div>
+                      </div>
+                    </div>
+                    <div class="d-grid"><button type="submit" class="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1-5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Sign in</button></div>
+                  </form>
+                  <div class="d-flex justify-content-center align-items-center mt-4"><span class="fw-normal">Not a Memeber? <a href="#" class="fw-bold">Create An Account</a></span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+    </div>
+    <div  style="height: 100vh;" class="col-6 d-flex align-items-center ">
+      <img src="assets/img/img-signin.jpg" style="height: 100%;" alt="logo">
+    </div>
+  </div>
+</div>
+
